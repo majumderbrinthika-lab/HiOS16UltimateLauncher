@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
                 )
             ).apply {
                 cornerRadius = dp(24).toFloat()
-            }
+            })
             setPadding(dp(12), dp(20), dp(12), dp(20))
         }
 
