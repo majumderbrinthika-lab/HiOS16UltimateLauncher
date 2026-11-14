@@ -35,12 +35,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showHome() {
-        val background = Color.rgb(15, 20, 40)
+        val bgColor = Color.rgb(15, 20, 40)
         val white = Color.WHITE
 
         val root = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            setBackgroundColor(background)
+            setBackgroundColor(bgColor)
         }
 
         val scroll = ScrollView(this).apply {
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         val clockCard = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             gravity = Gravity.CENTER
-            background = GradientDrawable(
+            setBackground(GradientDrawable(
                 GradientDrawable.Orientation.TL_BR,
                 intArrayOf(
                     Color.rgb(66, 75, 150),
@@ -144,7 +144,7 @@ class MainActivity : AppCompatActivity() {
                 isClickable = true
                 isFocusable = true
                 setPadding(dp(3), dp(8), dp(3), dp(8))
-                background = rounded(Color.TRANSPARENT, 16)
+                setBackground(rounded(Color.TRANSPARENT, 16))
             }
 
             val icon = ImageView(this).apply {
